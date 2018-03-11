@@ -1,16 +1,17 @@
 function perkalianUnik(arr) {
-    response = [];
-    for (x=0; x<arr.length; x++) {
-    part=1;
-    for (y=0; y<arr.length; y++){
-        if (x!==y){
-            part *=arr[y];
-        }
+    var hasil = [];
+    var part=0;
+     for (var x=0; x<arr.length; x++) {
+     part=1;
+     for (var y=0; y<arr.length; y++){
+         if (x!==y){
+             part *=arr[y];
+         }
+     }
+     hasil.push(part);
+     }
+      return hasil;
     }
-    response.push(part);
-    }
-     return response;
-   }
   
      // TEST CASES
      console.log(perkalianUnik([2, 4, 6])); // [24, 12, 8]
